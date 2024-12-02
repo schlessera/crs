@@ -1,0 +1,153 @@
+{
+    "id": "npc-form",
+    "name": "NPC Character Sheet",
+    "description": "A comprehensive form for creating and documenting non-player characters (NPCs) for role-playing games. This form helps game masters create rich, detailed characters with consistent backgrounds and personalities.",
+    "version": "1.0.0",
+    "lastUpdated": "2024-03-21",
+    "fields": [
+        {
+            "id": "character-concept",
+            "name": "Character Concept",
+            "type": "textarea",
+            "required": true,
+            "placeholder": "Describe the character's role, archetype, and purpose in the story",
+            "description": "A high-level description of the character's role and purpose. This includes their archetype, their function in the story or world, and any key themes they should embody. This will guide the creation of all other character aspects.",
+            "examples": [
+                "A world-weary merchant guard turned reluctant hero, who must navigate between their duty to protect trade routes and their growing involvement in uncovering a conspiracy within the merchant's guild. They represent the conflict between personal loyalty and larger moral obligations.",
+                "A cheerful village herbalist with a dark secret, serving as both a beloved community healer and a covert informant for a mysterious organization. Their dual nature creates tension between their genuine desire to help others and their hidden agenda.",
+                "An exiled noble turned tavern keeper, maintaining a facade of simple contentment while secretly gathering intelligence about the nobility who betrayed them. They embody themes of patience, calculated revenge, and the price of maintaining false identities."
+            ],
+            "contextPrompt": "Create a character concept that establishes clear story roles, motivations, and themes that can be developed throughout the character's other attributes. Consider how this concept will influence their name, appearance, personality, and relationships."
+        },
+        {
+            "id": "basic-name",
+            "name": "Character Name",
+            "type": "text",
+            "required": true,
+            "placeholder": "Enter character's full name",
+            "description": "The character's complete name, including any titles, honorifics, or aliases. Consider cultural naming conventions and how the name might reflect the character's background or social status.",
+            "examples": [
+                "Lady Ravenna Blackthorn, known in thieves' circles as 'The Shadow'",
+                "Elder Khorvash of the Seven Winds",
+                "Captain James 'Lucky' Martinez"
+            ],
+            "contextPrompt": "Generate a name that reflects this character's cultural background and social position, considering their established concept. Consider including titles, nicknames, or aliases if appropriate."
+        },
+        {
+            "id": "physical-appearance",
+            "name": "Physical Description",
+            "type": "textarea",
+            "required": true,
+            "placeholder": "Describe the character's notable physical features",
+            "description": "A detailed description of the character's appearance, including distinctive features, manner of dress, and physical presence. Include details that might hint at their profession, social status, or personal history.",
+            "examples": [
+                "A towering figure at 6'5\", with battle-scarred armor and a distinctive limp from an old war wound. Their silver hair is kept in tight braids, and a ceremonial tattoo marks their right cheek.",
+                "Short and wiry, with quick movements and watchful eyes. Wears simple merchant's clothes but of surprisingly fine quality. A burn scar on their left hand suggests a past they'd rather forget."
+            ],
+            "contextPrompt": "Create a physical description that aligns with the character concept and name, suggesting elements of their background and personality through their physical traits and presentation."
+        },
+        {
+            "id": "personality-traits",
+            "name": "Personality Traits",
+            "type": "array",
+            "required": true,
+            "placeholder": "List key personality traits",
+            "description": "Core personality characteristics that define the character's behavior and interactions. Include both positive and negative traits, as well as any quirks or memorable behavioral patterns.",
+            "examples": [
+                [
+                    "Fiercely loyal to friends",
+                    "Suspicious of authority",
+                    "Collects small mechanical devices",
+                    "Speaks in riddles when nervous"
+                ],
+                [
+                    "Pragmatic to a fault",
+                    "Hides insecurity with humor",
+                    "Cannot resist a mystery",
+                    "Always keeps one secret in reserve"
+                ]
+            ],
+            "contextPrompt": "Generate personality traits that naturally flow from the character concept and complement their physical description. Include a mix of traits that both help and hinder them in their role."
+        },
+        {
+            "id": "motivation",
+            "name": "Core Motivation",
+            "type": "text",
+            "required": true,
+            "placeholder": "What drives this character?",
+            "description": "The fundamental desire or goal that drives the character's actions and decisions. This should be specific enough to influence their behavior but broad enough to apply in various situations.",
+            "examples": [
+                "To restore their family's honor after a generations-old disgrace",
+                "To discover the truth about their missing mentor, whatever the cost",
+                "To build a legacy that will outlast their inevitable doom"
+            ],
+            "contextPrompt": "Create a compelling motivation that aligns with the character concept and explains their current role and behaviors."
+        },
+        {
+            "id": "background-history",
+            "name": "Background History",
+            "type": "textarea",
+            "required": true,
+            "placeholder": "Summarize the character's significant life events",
+            "description": "Key events and experiences that shaped the character's current state. Include pivotal moments, relationships, and circumstances that explain their current motivations and behaviors.",
+            "examples": [
+                "Born to merchant parents in the coastal city of Silverport, their early life was disrupted when pirates raided their family's trading vessel. This tragedy led them to join the Coastal Guard, where they rose through ranks while secretly investigating their family's fate.",
+                "Trained from childhood in the ancient arts of runic magic, they abandoned their studies after discovering their mentor's forbidden experiments. Now they wander, using their incomplete knowledge to help others while searching for ways to prevent their former master's plans."
+            ],
+            "contextPrompt": "Develop a background that explains how the character came to embody their concept, connecting their past experiences to their current role, personality, and motivations."
+        },
+        {
+            "id": "connections",
+            "name": "Relationships & Connections",
+            "type": "array",
+            "required": false,
+            "placeholder": "List important relationships and affiliations",
+            "description": "Significant relationships, organizational affiliations, and social connections that define the character's place in the world and provide potential story hooks.",
+            "examples": [
+                [
+                    "Member of the Merchant's Guild (reluctant informant for their intelligence network)",
+                    "Older sister serves as Royal Court Mage",
+                    "Owes a life debt to the leader of the Thieves' Guild"
+                ],
+                [
+                    "Former apprentice to Master Smith Greyforge (ended badly)",
+                    "Secret supporter of the resistance movement",
+                    "Unofficial guardian of three orphaned street children"
+                ]
+            ],
+            "contextPrompt": "Generate relationships and connections that support the character's concept and role, creating a network that both enables and complicates their goals."
+        },
+        {
+            "id": "secrets",
+            "name": "Secrets & Hidden Information",
+            "type": "array",
+            "required": false,
+            "placeholder": "List any secrets or hidden aspects",
+            "description": "Information the character keeps hidden, including personal secrets, hidden abilities, or knowledge that could be relevant to plots or character development.",
+            "examples": [
+                [
+                    "Actually a member of the deposed royal family in hiding",
+                    "Can understand dragon speech but keeps this ability hidden",
+                    "Knows the true location of the lost city but fears the knowledge is cursed"
+                ],
+                [
+                    "Secretly collecting magical artifacts for an unknown patron",
+                    "Their healing abilities come from a pact with an ancient spirit",
+                    "Still carries the key to their childhood home, now a notorious haunted house"
+                ]
+            ],
+            "contextPrompt": "Create secrets that add depth to the character concept and can serve as future plot hooks, ensuring they connect logically to the character's established background and current situation."
+        }
+    ],
+    "metadata": {
+        "usage": {
+            "recommendedContext": "Role-playing game character creation and management",
+            "intendedAudience": "Game Masters, Story Writers, Role-playing Game Designers",
+            "suggestedWorkflow": "Start with the character concept to establish their role and themes, then use that to inform all subsequent fields."
+        },
+        "integration": {
+            "llmPromptPrefix": "Using the following form field information, generate appropriate content that maintains consistency with existing character details:",
+            "llmPromptSuffix": "Ensure the generated content aligns with the provided examples and maintains internal consistency with other character aspects."
+        }
+    }
+}

@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+# Get the directory where the script is located
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+PROJECT_ROOT="$(cd "$DIR/.." && pwd)"
+
+# Function to check if a command exists
+command_exists() {
+    command -v "$1" >/dev/null 2>&1
+}
+
+# Check if nvm is loaded
+if [ -n "$NVM_DIR" ]; then
+    # Source nvm if it exists
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+elif [ -f "$HOME/.nvm/nvm.sh" ]; then
+    # Try to load nvm from the default location
+    . "$HOME/.nvm/nvm.sh"
+fi
+
+# If nvm is available, use it to set the correct Node version
+if command_exists nvm; then
+    # Change to project root to use .nvmrc
+    cd "$PROJECT_ROOT"
+    nvm use > /dev/null 2>&1
+fi
+
+# Execute the actual Node.js script
+exec node "$PROJECT_ROOT/src/index.mjs" "$@" 
